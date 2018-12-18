@@ -1,5 +1,3 @@
-/* general */
-
 @import url("https://fonts.googleapis.com/css?family=Abel%7CFjalla+One%7CJosefin+Sans");
 
 html,
@@ -103,17 +101,12 @@ footer div {
   transform: translateY(-20%);
 }
 
-/* hemsida mobil layout */
-
 .container {
   margin: 10px;
   padding: 10px;
 }
-/* .column {
-  width: 100%;
-} */
+
 .box {
-  /* width: 100%; */
   border-radius: 3px;
   background-color: #fb1b7d;
   box-shadow: 0 0 10px rgba(0, 0, 0, 5);
@@ -167,8 +160,19 @@ figure {
   padding: 2%;
 }
 
+.container-2 {
+  margin: 10px;
+  padding: 10px;
+}
+.container-2 p, .column p {
+  background-color: white;
+  line-height: 1.5em;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
 @media only screen and (min-width: 500px) {
-  /* .container {
+  .container {
     width: 90%;
     margin-top: 10px;
     margin: auto;
@@ -178,7 +182,7 @@ figure {
     width: 50%;
     padding-top: 10px;
     padding-bottom: 20px;
-  } */
+  }
   .box {
     width: 75%;
     margin: auto;
@@ -209,17 +213,5 @@ figure {
   }
 }
 
-/* sammanfattningssida layout */
-
-.container-2 {
-  margin: 10px;
-  padding: 10px;
-}
-.container-2 p, .column p {
-  background-color: white;
-  line-height: 1.5em;
-  font-size: 1.2em;
-  padding: 10px;
-}
 
 
