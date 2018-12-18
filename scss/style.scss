@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css?family=Abel|Fjalla+One|Josefin+Sans");
+
+$font-title: "Fjalla One";
+$font-subtitle: "Josefin Sans";
+$font-txt: "Abel";
+
+$clr-primary: #2369a5;
+$clr-secondary: #fb1b7d;
+$clr-tertiary: #53606e;
+$clr-txt: #272727;
+$clr-bg: #f1f1f1;
+
+$tab-width: 40px;
+$max-tabs: 10;
+
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  // box-sizing: inherit;
+}
+
+body {
+  background: $clr-bg;
+  color: $clr-txt;
+  font-family: $font-txt, Arial, Helvetica, sans-serif;
+}
+
+// vertical accordion
+header {
+    background: $clr-primary;
+    padding-top: 1.5rem;
+    width: 100%;
+    // height: auto;
+    position: relative;
+    z-index: 9999999;
+  }
+
+  nav {
+    position: relative;
+    text-align: center;
+    background: $clr-primary;
+    width: 100%;
+    box-shadow: 0 3px 2px darken($clr-primary, 10%);
+  }
+
+  nav > label {
+    display: block;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: $clr-bg;
+    margin: 0 0 0 1rem;
+    // line-height: 1rem;
+    width: 1rem;
+    position: relative;
+    top: -3rem;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: $font-title, Arial, Helvetica, sans-serif;
+    color: $clr-bg;
+    text-shadow: 0 1px 1px lighten($clr-txt, 15%);
+  }
+
+  #toggle {
+    display: none;
+  }
+
+  #toggle:checked + .menu {
+    display: block;
+  }
+
+  .menu {
+    width: 100%;
+    text-align: left;
+    display: none;
+    font-family: $font-subtitle, Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: $clr-bg;
+
+    a {
+      display: inline-block;
+    //   border-bottom: 1px solid darken($clr-primary, 10%);
+      text-decoration: none;
+      color: darken($clr-bg, 10%);
+      width: 50%;
+      margin: 0 auto;
+      padding: 0.5rem 1rem;
+
+      &:hover {
+        color: $clr-bg;
+        font-size: 1.4rem;
+      }
+
+      &:focus {
+        display: block;
+        background: darken($clr-bg, 5%);
+        color: $clr-primary;
+        width: 100vw;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  main {
+    // width: 100%;
+    // height: auto;
+    // position: relative;
+    // top: 5rem;
+
+    ul {
+      list-style: none;
+    }
+  }
+
+  // hide the <input> type='radio' -- checkbox
+  input[type="radio"] {
+    position: absolute;
+    top: -999999px;
+    left: -999999px;
+  }
+
+  .labels {
+    display: block;
+    width: 100%;
+    height: $tab-width;
+    overflow: hidden;
+    text-align: center;
+    font-size: 14px;
+    line-height: $tab-width;
+    background: $clr-tertiary;
+
+    -webkit-transition: background 300ms ease;
+    -moz-transition: background 300ms ease;
+    -ms-transition: background 300ms ease;
+    -o-transition: background 300ms ease;
+    transition: background 300ms ease;
+  }
+
+  li:nth-child(even) > input + label {
+    background: lighten($clr-tertiary, 15%);
+  }
+
+  .labels:hover,
+  li:nth-child(even) > input + label:hover {
+    background: $clr-primary;
+    color: $clr-bg;
+    cursor: pointer;
+  }
+
+  input[type="radio"]:checked ~ .labels {
+    background: $clr-secondary;
+    color: lighten($clr-txt, 10%);
+    cursor: default !important;
+  }
+
+//   sliders
+  .accordionSlide {
+    display: block;
+    height: 0;
+    width: 100%;
+    overflow-y: scroll;
+    font-size: 12px;
+    line-height: 1.1;
+
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+
+  input[type="radio"]:not(:checked) ~ label > * {
+    position: relative;
+    font-size: 1.2em;
+    white-space: nowrap;
+  }
+
+  input[type="radio"]:checked ~ label > * {
+    display: none;
+  }
+
+  @for $i from 2 through $max-tabs {
+    @for $j from 1 through $i {
+      li:nth-child(#{$j}):nth-last-child(#{$i - $j + 1})
+        input[type="radio"]:checked
+        ~ .accordionSlide {
+        height: calc(100% - #{$i * $tab-width});
+      }
+    }
+  }
+
+  .demo {
+    margin: 1rem auto;
+    max-width: 100vw;
+    height: auto;
+
+    h2 {
+      text-align: center;
+      font-family: $font-subtitle, Arial, Helvetica, sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    p {
+      text-align: justify;
+      font-size: 1.2rem;
+      margin: 1rem;
+
+      a {
+          text-decoration: none;
+          color: $clr-primary;
+      }
+    }
+  }
+
+  .pen {
+    max-width: 85%;
+    height: auto;
+    margin: 10px auto;
+  }
+
+  .pen-items {
+      max-width: 90%;
+  }
+
+// footer
+  footer {
+    background: darken($clr-txt, 8%);
+    padding: 1rem;
+    text-align: center;
+    font-size: 14px;
+    color: darken($clr-bg, 5%);
+    position: relative;
+    display: block;
+
+    p {
+        font-size: 14px;
+    }
+  }
+
+
+// horizontal accordion
+@media only screen and (min-width: 680px) {
+      nav > label {
+        font-size: 1.5rem;
+        margin: 0 0 0 2rem;
+      }
+
+      .menu {
+        a {
+          padding: 0.5rem 2rem;
+        }
+      }
+
+      // Main section styling
+      main {
+        height: 100vh;
+      }
+
+      // vericle labels
+      .labels {
+        float: left;
+        height: 100vh;
+        width: $tab-width;
+        font-size: 16px;
+      }
+
+      // sliders
+      .accordionSlide {
+        height: 100%;
+        width: 0;
+        padding: 10px 0;
+        float: left;
+        overflow: hidden;
+        font-size: 15px;
+
+        * {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+
+      input[type="radio"]:not(:checked) ~ label > * {
+        top: 50%;
+        transform: translateY(-50%);
+        transform: rotate(-90deg);
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      @for $i from 2 through $max-tabs {
+        @for $j from 1 through $i {
+          li:nth-child(#{$j}):nth-last-child(#{$i - $j + 1})
+            input[type="radio"]:checked
+            ~ .accordionSlide {
+            width: calc(100% - #{$i * $tab-width});
+          }
+        }
+      }
+
+      .demo {
+        max-height: 100vh;
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        p {
+          text-align: justify;
+          font-size: 1.3rem;
+          margin: 1rem 0;
+        }
+      }
+
+      .pen {
+        max-width: 80%;
+        margin-top: 4em;
+      }
+
+      // footer
+      footer {
+        padding-top: 2.5rem;
+        top: -52px;
+
+        div {
+          font-size: 16px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+    }
+
+    .pen-items {
+        @supports(display: grid) {
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+    }
+}
+
+@supports(display: grid) {
+    html {
+        height: 100%;
+      }
+      body {
+        min-height: 100%;
+        display: grid;
+        grid-template-rows: 1fr auto;
+      }
+      main {
+          height: 100%;
+      }
+      footer {
+        grid-row-start: 3;
+        grid-row-end: 4;
+      }
+}
+
+  @supports(display: flex) {
+    header {
+        box-shadow: 0 3px 2px darken($clr-primary, 10%);
+      }
+      nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: none;
+
+        label {
+            display: flex;
+            align-self: flex-start;
+        }
+    }
+  }
