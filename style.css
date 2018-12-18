@@ -6,20 +6,17 @@ body {
   height: 100%;
   width: 100%;
 }
-
 *,
 *:before,
 *:after {
   margin: 0;
   padding: 0;
 }
-
 body {
   background: #f1f1f1;
   color: #272727;
   font-family: "Abel", Arial, Helvetica, sans-serif;
 }
-
 header {
   background: #2369a5;
   padding-top: 1.5rem;
@@ -28,14 +25,12 @@ header {
   position: relative;
   z-index: 9999999;
 }
-
 nav {
   position: relative;
   text-align: center;
   width: 100%;
   box-shadow: 0 3px 2px #1a4e7b;
 }
-
 nav > label {
   display: block;
   cursor: pointer;
@@ -47,22 +42,18 @@ nav > label {
   position: relative;
   top: -3rem;
 }
-
 h1 {
   text-align: center;
   font-family: "Fjalla One", Arial, Helvetica, sans-serif;
   color: #f1f1f1;
   text-shadow: 0 1px 1px #4d4d4d;
 }
-
 #toggle {
   display: none;
 }
-
 #toggle:checked + .menu {
   display: block;
 }
-
 .menu {
   width: 100%;
   text-align: left;
@@ -81,6 +72,7 @@ h1 {
 }
 .menu a:hover {
   color: #f1f1f1;
+  font-size: 1.4rem;
 }
 .menu a:focus {
   display: block;
@@ -96,16 +88,13 @@ footer {
 }
 footer div {
   text-align: center;
-  font-size: 14px;
-  -webkit-transform: translateY(-20%);
-  transform: translateY(-20%);
+  padding-top: 10px;
+  font-size: 16px;
 }
-
 .container {
   margin: 10px;
   padding: 10px;
 }
-
 .box {
   border-radius: 3px;
   background-color: #fb1b7d;
