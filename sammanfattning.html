@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/normalize.css@8.0.1/normalize.css"
+    />
+    <title>Sammanfattning</title>
+  </head>
+  <body>
+    <header>
+      <h1>Flexbox | Grid</h1>
+      <nav>
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle" />
+        <ul class="menu">
+          <li><a href="hem.html">hem</a></li>
+          <li><a href="#">demo</a></li>
+          <li><a href="sammanfattning.html">sammanfattning</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container-2">
+      <h2>Sammanfattning</h2>
+      <div class="box">
+        <p>
+          Syntaxen i CSS Grid kan vara förvirrande för nybörjare tex minmax,
+          repeat, grid-auto-flow dense osv. Det behövs lite tid att bli van vid
+          dessa syntax.<br /><br />
+          Nu är det mycket enklare för att animera i Flexbox än i Grid. Man
+          animerar transition egenskaper samt med flex-grow, flex-shrink osv
+          medan i Grid finns det bara grid-gap och
+          grid-template-columns/grid-template-rows kan bli animerrad.<br /><br />
+          Både flexbox och grid är bra på olika sätt och kan användas
+          tillsammans. Man kan ha en container med grid egenskaper och items
+          (children) med flex egenskaper och vice versa. Om man behöver bara att
+          en container ska stå bredvid en annan, då är det enklare att använda
+          flexbox men om layouten består av rader och kolumner
+          som ändrar enligt en responsive modell skulle grid underlätta arbetet.
+        </p>
+      </div>
+      <h2>Flexbox browser support</h2>
+      <div class="box">
+        <img
+          src="images/flexbox-browser-support.png"
+          alt="flexbox-browser-support"
+        />
+        <a href="https://caniuse.com/#feat=flexbox" target="_blank"
+          >https://caniuse.com/#feat=flexbox</a
+        >
+      </div>
+      <h2>Grid browser support</h2>
+      <div class="box">
+        <img src="images/grid-browser-support.png" alt="grid-browser-support" />
+        <a href="https://caniuse.com/#search=grid" target="_blank"
+          >https://caniuse.com/#search=grid</a
+        >
+      </div>
+    </main>
+    <!-- container-2 -->
+
+    <footer>
+      <div>
+        &copy; 2018 No rights reserved | Xiaorui Wang & Valesca Sarrocchi
+      </div>
+    </footer>
+  </body>
+</html>

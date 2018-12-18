@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/normalize.css@8.0.1/normalize.css"
+    />
+    <title>Hem</title>
+  </head>
+  <body>
+    <header>
+      <h1>Flexbox | Grid</h1>
+      <nav>
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle" />
+        <ul class="menu">
+          <li><a href="hem.html">hem</a></li>
+          <li><a href="#">demo</a></li>
+          <li><a href="sammanfattning.html">sammanfattning</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="column">
+        <h2>Flexbox - En dimension</h2>
+        <div class="box">
+          <p>
+            Flexbox är tänkt för att skapa endimensionell layout. Om man vill
+            placera items i en riktning, antingen kolumner eller rader, då är
+            det lättare att använda Flexbox.
+          </p>
+        </div>
+        <div class="box">
+          <img
+            src="images/flexbox-layout.png"
+            alt="Flexbox layout"
+            id="flexbild"
+          />
+          <a
+            href="https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf"
+            target="_blank"
+            >hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox</a
+          >
+        </div>
+        <!-- box -->
+
+        <h2>Flexbox - Innehåll först</h2>
+        <!-- <div class="box"><p>Flexbox baseras på innehållet.</p></div> -->
+        <div class="box">
+          <p
+            data-height="250"
+            data-theme-id="0"
+            data-slug-hash="vvBbNY"
+            data-default-tab="html,result"
+            data-user="ValescaSS"
+            data-pen-title="Exempel 1 - Flexbox"
+            class="codepen"
+          >
+            See the Pen
+            <a href="https://codepen.io/ValescaSS/pen/vvBbNY/"
+              >Exempel 1 - Flexbox</a
+            >
+            by Valesca Sarrocchi (<a href="https://codepen.io/ValescaSS"
+              >@ValescaSS</a
+            >) on <a href="https://codepen.io">CodePen</a>.
+          </p>
+          <script
+            async
+            src="https://static.codepen.io/assets/embed/ei.js"
+          ></script>
+        </div>
+        <!-- box -->
+        <h2>Flexbox egenskaper</h2>
+        <div class="box">
+          <h3>Container</h3>
+
+          <ul class="list">
+            <li>
+              display:
+              <ul class="valueslist">
+                <li>flex</li>
+              </ul>
+            </li>
+            <li>
+              flex-direction:
+              <ul class="valueslist">
+                <li>row</li>
+                <li>row-reverse</li>
+                <li>column</li>
+                <li>colum-reverse</li>
+              </ul>
+            </li>
+            <li>
+              flex-wrap:
+              <ul class="valueslist">
+                <li>wrap</li>
+                <li>wrap-reverse</li>
+              </ul>
+            </li>
+            <li>
+              justify-content:
+              <ul class="valueslist">
+                <li>center</li>
+                <li>flex-start</li>
+                <li>flex-end</li>
+                <li>space-between</li>
+                <li>space-around</li>
+                <li>space-evenly</li>
+              </ul>
+            </li>
+            <li>
+              align-content:
+              <ul class="valueslist">
+                <li>center</li>
+                <li>flex-start</li>
+                <li>flex-end</li>
+                <li>space-between</li>
+                <li>space-around</li>
+                <li>space-evenly</li>
+              </ul>
+            </li>
+            <li>
+              align-items:
+              <ul class="valueslist">
+                <li>center</li>
+                <li>flex-start</li>
+                <li>flex-end</li>
+                <li>stretch</li>
+              </ul>
+            </li>
+          </ul>
+          <!-- list -->
+
+          <h3>Items</h3>
+
+          <ul class="list">
+            <li>
+              order:
+              <ul class="valueslist">
+                <li>heltal (default 0)</li>
+              </ul>
+            </li>
+            <li>
+              flex-grow:
+              <ul class="valueslist">
+                <li>positiv nummer (default 0)</li>
+              </ul>
+            </li>
+            <li>
+              flex-shrink:
+              <ul class="valueslist">
+                <li>positiv nummer (default 1)</li>
+              </ul>
+            </li>
+            <li>
+              flex-basis:
+              <ul class="valueslist">
+                <li>length (default auto)</li>
+              </ul>
+            </li>
+            <li>
+              flex:
+              <ul class="valueslist">
+                <li>
+                  flex-grow &nbsp; flex-shrink &nbsp; flex-basis (default: 0 1
+                  auto)
+                </li>
+              </ul>
+            </li>
+            <li>
+              align-self:
+              <ul class="valueslist">
+                <li>flex-start</li>
+                <li>flex-end</li>
+                <li>center</li>
+                <li>stretch</li>
+              </ul>
+            </li>
+          </ul>
+          <!-- list -->
+        </div>
+        <!-- box -->
+
+        <h2>Flexbox Alignment</h2>
+        <div class="box">
+          <img
+            src="images/flexbox-main-cross-axis.png"
+            alt="flexbox-main-cross-axis"
+          />
+          <a
+            href="https://dev.opera.com/articles/flexbox-basics/"
+            target="_blank"
+            >https://dev.opera.com/articles/flexbox-basics/</a
+          >
+        </div>
+
+        <div class="box">
+          <figure>
+            <img
+              src="images/justify-content-flexbox.png"
+              alt="justify-content-flexbox"
+            />
+            <figcaption>Justify-content: flex-start;</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/align-content-flexbox.png"
+              alt="align-content-flexbox"
+            />
+            <figcaption>Align-content: flex-start;</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/align-items-flexbox.png"
+              alt="align-items-flexbox"
+            />
+            <figcaption>Align-items: flex-start;</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/align-self-flexbox.png"
+              alt="align-items-flexbox"
+            />
+            <figcaption>Align-self: flex-end;</figcaption>
+          </figure>
+          <a
+            href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+            target="_blank"
+            >css-tricks.com/snippets/css/a-guide-to-flexbox</a
+          >
+        </div>
+        <!-- box -->
+      </div>
+      <!-- column -->
+
+      <div class="column">
+        <h2>Grid - Två dimensioner</h2>
+        <div class="box">
+          <p>
+            Grid är tänkt för tvådimensionella layouter. Om man vill skapa en
+            hel layout i två dimensioner - med både rader och kolumner - kan man
+            använda CSS Grid.
+          </p>
+        </div>
+        <div class="box">
+          <img src="images/grid-layout.png" alt="Grid layout" />
+          <a
+            href="https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf"
+            target="_blank"
+            >hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox</a
+          >
+        </div>
+        <!-- box -->
+
+        <h2>Grid - Layout först</h2>
+        <!-- <div class="box"><p>Grid baseras på layouten.</p></div> -->
+        <div class="box">
+          <p
+            data-height="250"
+            data-theme-id="0"
+            data-slug-hash="wRwGNm"
+            data-default-tab="css,result"
+            data-user="ValescaSS"
+            data-pen-title="Exempel 1 - Grid"
+            class="codepen"
+          >
+            See the Pen
+            <a href="https://codepen.io/ValescaSS/pen/wRwGNm/"
+              >Exempel 1 - Grid</a
+            >
+            by Valesca Sarrocchi (<a href="https://codepen.io/ValescaSS"
+              >@ValescaSS</a
+            >) on <a href="https://codepen.io">CodePen</a>.
+          </p>
+          <script
+            async
+            src="https://static.codepen.io/assets/embed/ei.js"
+          ></script>
+        </div>
+        <!-- box -->
+
+        <h2>Grid egenskaper</h2>
+        <div class="box">
+          <h3>Container</h3>
+
+          <ul class="list">
+            <li>
+              display:
+              <ul class="valueslist">
+                <li>grid</li>
+              </ul>
+            </li>
+            <li>
+              grid-template-columns:<br />
+              grid-template-rows:
+              <ul class="valueslist">
+                <li>track-size</li>
+                <li>[line-name] track-size</li>
+              </ul>
+            </li>
+            <li>
+              grid-template-areas:
+              <ul class="valueslist">
+                <li>grid-area-name</li>
+                <li>. (empty grid cell)</li>
+              </ul>
+            </li>
+            <li>
+              grid-template:
+              <ul class="valueslist">
+                <li>grid-template-rows &nbsp; grid-template-columns</li>
+              </ul>
+            </li>
+            <li>
+              column-gap:<br />
+              row-gap:
+              <ul class="valueslist">
+                <li>line-size</li>
+              </ul>
+            </li>
+            <li>
+              gap:
+              <ul class="valueslist">
+                <li>grid-row-gap &nbsp; grid-column-gap</li>
+              </ul>
+            </li>
+            <li>
+              justify-items:
+              <ul class="valueslist">
+                <li>start</li>
+                <li>end</li>
+                <li>center</li>
+                <li>stretch</li>
+              </ul>
+            </li>
+            <li>
+              align-items:
+              <ul class="valueslist">
+                <li>start</li>
+                <li>end</li>
+                <li>center</li>
+                <li>stretch</li>
+              </ul>
+            </li>
+            <li>
+              place-items:
+              <ul class="valueslist">
+                <li>align-items / justify-items</li>
+              </ul>
+            </li>
+            <li>
+              justify-content:
+              <ul class="valueslist">
+                <li>start</li>
+                <li>end</li>
+                <li>center</li>
+                <li>stretch</li>
+                <li>space-around</li>
+                <li>space-between</li>
+                <li>space-evenly</li>
+              </ul>
+            </li>
+            <li>
+              align-content:
+              <ul class="valueslist">
+                <li>start</li>
+                <li>end</li>
+                <li>center</li>
+                <li>stretch</li>
+                <li>space-around</li>
+                <li>space-between</li>
+                <li>space-evenly</li>
+              </ul>
+            </li>
+            <li>
+              place-content:
+              <ul class="valueslist">
+                <li>align-content / justify-content</li>
+              </ul>
+            </li>
+            <li>
+              grid-auto-columns:<br />
+              grid-auto-rows:
+              <ul class="valueslist">
+                <li>track-size</li>
+              </ul>
+            </li>
+            <li>
+              grid-auto-flow:
+              <ul class="valueslist">
+                <li>row</li>
+                <li>column</li>
+                <li>dense</li>
+              </ul>
+            </li>
+            <li>
+              grid:
+              <ul class="valueslist">
+                <li>grid-template</li>
+                <li>
+                  grid-template-rows / [ auto-flow &amp&amp dense? ]
+                  grid-auto-columns
+                </li>
+                <li>
+                  [ auto-flow &amp&amp dense? ] grid-auto-rows /
+                  grid-template-columns
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <!-- list -->
+
+          <h3>Items</h3>
+
+          <ul class="list">
+            <li>
+              grid-column-start:<br />
+              grid-column-end:<br />
+              grid-row-start:<br />
+              grid-row-end:
+              <ul class="valueslist">
+                <li>line</li>
+                <li>span number</li>
+                <li>span name</li>
+              </ul>
+            </li>
+            <li>
+              grid-column:<br />
+              grid-row:
+              <ul class="valueslist">
+                <li>start-line / end-line</li>
+              </ul>
+            </li>
+            <li>
+              grid-area:
+              <ul class="valueslist">
+                <li>name</li>
+                <li>row-start / column-start / row-end / column-end</li>
+              </ul>
+            </li>
+            <li>
+              justify-self:
+              <ul class="valueslist">
+                <li>start</li>
+                <li>end</li>
+                <li>center</li>
+                <li>stretch</li>
+              </ul>
+            </li>
+            <li>
+              align-self:
+              <ul class="valueslist">
+                <li>start</li>
+                <li>end</li>
+                <li>center</li>
+                <li>stretch</li>
+              </ul>
+            </li>
+            <li>
+              place-self:
+              <ul class="valueslist">
+                <li>align-self / justify-self</li>
+              </ul>
+            </li>
+          </ul>
+          <!-- list -->
+        </div>
+        <!-- box -->
+
+        <h2>Grid Alignment</h2>
+        <div class="box">
+          <img
+            src="images/grid-block-inline-axis.png"
+            alt="grid-block-inline-axis"
+          />
+          <a href="https://noti.st/rachelandrew/Mflgdx/slides" target="_blank"
+            >https://noti.st/rachelandrew/Mflgdx/slides</a
+          >
+        </div>
+        <div class="box">
+          <figure>
+            <img src="images/justify-items-grid.png" alt="justify-items-grid" />
+            <figcaption>Justify-items: start;</figcaption>
+          </figure>
+          <figure>
+            <img src="images/align-items-grid.png" alt="align-items-grid" />
+            <figcaption>Align-items: start;</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/justify-content-grid.png"
+              alt="justify-content-grid"
+            />
+            <figcaption>Justify-content: start;</figcaption>
+          </figure>
+          <figure>
+            <img src="images/align-content-grid.png" alt="align-content-grid" />
+            <figcaption>Align-content: start;</figcaption>
+          </figure>
+          <figure>
+            <img src="images/justify-self-grid.png" alt="justify-self-grid" />
+            <figcaption>Justify-self: start;</figcaption>
+          </figure>
+          <figure>
+            <img src="images/align-self-grid.png" alt="align-self-grid" />
+            <figcaption>Align-self: start;</figcaption>
+          </figure>
+          <a
+            href="https://css-tricks.com/snippets/css/complete-guide-grid/"
+            target="_blank"
+            >css-tricks.com/snippets/css/complete-guide-grid</a
+          >
+        </div>
+        <!-- box -->
+      </div>
+      <!-- column -->
+    </main>
+    <!-- container -->
+
+    <div style="clear:both"></div>
+
+    <footer>
+      <div>
+        &copy; 2018 No rights reserved | Xiaorui Wang & Valesca Sarrocchi
+      </div>
+    </footer>
+  </body>
+</html>
